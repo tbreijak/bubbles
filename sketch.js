@@ -13,5 +13,5 @@ draw = function () {
   for (var i = 0; i < bubbles.length; ++i) {
     bubbles[i].update();
     bubbles[i].display();
-  };
+  }
 };
