@@ -1,37 +1,17 @@
-var bubblepit = [];
+var bubbles = [];
 
-var updateAndDisplay = function(bubble) {
-  bubble.update();
-  bubble.display();
-};
-
-setup = function() {
-  createCanvas(600, 400);
+setup = function () {
+  createCanvas(600, 600);
+  // your code goes here
 };
 
 draw = function () {
   background(0);
-  //iterateFunctionally(ballpit);
-  iterateWithWhileLoop(ballpit);
-  //iterateWithForLoop(bubblepit);
-  //bubblepit.push(new Bubble (100,100));
-  if (this.bubblepit < 500) bubblepit.push (new Bubble (100, 100));
-};
+  // your code goes here
+  if (mouseIsPressed) bubbles.push(new Bubble(mouseX, mouseY));
 
-//var iterateFunctionally = function (array) {
-  //array.forEach(updateAndDisplay);
-//};
-
-var iterateWithWhileLoop = function (array) {
-  var index = 0;
-  while (index < array.length) {
-  updateAndDisplay(array[index]);
-    ++index;
-  }
-};
-
-var iterateWithForLoop = function (array) {
-  for (var i = 0; i < bubblepit.length; ++i) {
-    updateAndDisplay(array[i]);
+  for (var i = 0; i < bubbles.length; ++i) {
+    bubbles[i].update();
+    bubbles[i].display();
   }
 };
