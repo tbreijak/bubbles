@@ -8,10 +8,10 @@ setup = function () {
 draw = function () {
   background(0);
   // your code goes here
-  if (mouseIsPressed) bubbles.push(new Bubble(mouseX, mouseY));
+//  if (mouseIsPressed) bubbles.push(new Bubble(mouseX, mouseY));
 
   for (var i = 0; i < bubbles.length; ++i) {
     bubbles[i].update();
     bubbles[i].display();
-  };
+  }
 };
